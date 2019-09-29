@@ -1,0 +1,51 @@
+<ul>
+    <li class="icon-container">
+        <a routerLink="/"><i class="material-icons">keyboard_backspace</i></a>
+    </li>
+
+    <li class="right icon-container">
+        <a routerLink="/messages"><i class="material-icons">notifications</i></a>
+    </li>
+</ul>
+<div class="picture-container">
+    <div class="picture">
+        <span class="notify-badge"></span>
+        <img src="../../assets/img/sample.png">
+    </div>
+</div>
+<div class="title-container">
+    <h2>
+        Aron Mendy
+    </h2>
+    <h2 class="title">
+        Senior Industrial Designer
+    </h2>
+</div>
+<div class="meta-container">
+    <div class="meta-wrapper">
+        <span class="meta-data">17</span>
+        <span class="meta-title">Project</span>
+    </div>
+    <div class="meta-wrapper">
+        <span class="meta-data">982</span>
+        <span class="meta-title">Likes</span>
+    </div>
+    <div class="meta-wrapper">
+        <span class="meta-data">5K</span>
+        <span class="meta-title">Followers</span>
+    </div>
+</div>
+<hr class="separator"/>
+<div class="course-header">
+    <h1>
+        My courses
+    </h1>
+</div>
+<div class="course-container">
+    <div class="course" *ngFor="let course of courses">
+        <img class="course-image" [src]="course.imageurl">
+        <span class="course-title">{{course.title}}</span>
+        <span class="course-author">{{course.author}}</span>
+        <app-progressbar></app-progressbar>
+    </div>
+</div>

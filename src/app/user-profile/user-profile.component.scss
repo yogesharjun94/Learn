@@ -1,0 +1,125 @@
+@import "../../assets/scss/colors";
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    li {
+        float: left;
+        a {
+            display: block;
+            color: $primary;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+          }
+          a:hover {
+            border-bottom:1px solid $primary;
+          }
+  }
+  li.right{
+      float: right;
+  }
+  li.icon-container{
+    a:hover {
+        border-bottom:none;
+      }
+  }
+
+}
+
+.picture-container{
+    display: flex;
+    .picture{
+        display: inline-block;
+        margin:auto;
+
+        img{
+            width: 8rem;
+            height: 8rem;
+            border-radius: 50%;
+            border: 0.3rem solid #ccc;
+            box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
+        }
+        .notify-badge{
+            position: absolute;
+            margin-top: 6.5rem;
+            margin-left: 6.6rem;
+            background: #07D822;
+            border-radius: 50%;
+            color: white;
+            width: 1.7rem;
+            height: 1.7rem;
+        }
+    }
+}
+
+.title-container{
+    display: flex;
+    padding-top: 2rem;
+    flex-direction: column;
+    h2{
+        margin: auto;
+    }
+    h2.title{
+        color:$secondary;
+        font-weight:100;
+        margin-top: 1rem;
+    }
+}
+
+.meta-container{
+    display: flex;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    flex-direction: row;
+    justify-content: space-around;
+    .meta-wrapper{
+        display: flex;
+        flex-direction: column;
+    }
+    span.meta-data{
+        text-align: center;
+    }
+    span.meta-title{
+        color:$secondary;
+    }
+}
+
+hr.separator{
+    border: 0.5px solid #eeffff;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.course-header{
+    padding-left: 3rem;
+}
+
+.course-container{
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    .course{
+        display: flex;
+        flex-direction: column;
+        padding : 0 1rem;
+        .course-image{
+            width: 8rem;
+            height: 8rem;
+            border-radius: 0.7rem;
+        }
+        .course-title{
+            padding-top: 1rem;
+        }
+        .course-author{
+            padding-top: 1rem;
+            color:$secondary;
+        }
+        app-progressbar{
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+    }
+}

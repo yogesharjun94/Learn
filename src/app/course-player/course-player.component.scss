@@ -1,0 +1,28 @@
+@import "../../assets/scss/colors";
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    li {
+        float: left;
+        a {
+            display: block;
+            color: $primary;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+          }
+          a:hover {
+            border-bottom:1px solid $primary;
+          }
+  }
+  li.right{
+      float: right;
+      a:hover {
+        border-bottom:none;
+      }
+  }
+
+}
+  
