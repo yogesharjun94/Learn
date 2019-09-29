@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GetusermessagesService } from '../services/user/getusermessages.service';
 
 @Component({
   selector: 'app-messages',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MessagesComponent implements OnInit {
 
-  constructor() { }
+  viewMode = 'teacherMessages';
+  userMessages: Array<object>;
+  constructor(private userMessagesService : GetusermessagesService) { }
 
   ngOnInit() {
+    this.userMessagesService.get().subscribe(res =>{
+      this.userMessages = res;
+      console.log(res);
+    })
   }
 
 }

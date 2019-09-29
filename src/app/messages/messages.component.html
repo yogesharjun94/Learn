@@ -1,11 +1,44 @@
 <ul>
-        <li class="icon-container">
-            <a routerLink="/userprofile"><i class="material-icons">keyboard_backspace</i></a>
-        </li>
-        <li>
-            <a>MESSAGES</a>
-        </li>
-        <li class="right icon-container">
-            <a routerLink="/messages"><i class="material-icons">notifications</i></a>
-        </li>
-    </ul>
+    <li class="icon-container">
+        <a routerLink="/userprofile"><i class="material-icons">keyboard_backspace</i></a>
+    </li>
+    <li class="icon-container">
+        <a>MESSAGES</a>
+    </li>
+    <li class="right icon-container">
+        <a routerLink="/messages"><span class="notify-badge"></span><i class="material-icons">notifications_none</i></a>
+    </li>
+</ul>
+<div class="message-container">
+    <div class="tab-slider--nav">
+        <ul class="tab-slider--tabs">
+            <li class="tab-slider--trigger" [class.active]="viewMode == 'teacherMessages'" rel="teacherMessages" (click)="viewMode ='teacherMessages'">
+                Teachers</li>
+            <li class="tab-slider--trigger" [class.active]="viewMode == 'userMessages'" rel="userMessages" (click)="viewMode ='userMessages'">
+                Users</li>
+        </ul>
+    </div>
+    <div class="tab-slider--container" [ngSwitch]="viewMode">
+        <div id="teacherMessages" class="tab-slider--body" *ngSwitchCase="'teacherMessages'">
+            
+        </div>
+        <div id="userMessages" class="tab-slider--body" *ngSwitchCase="'userMessages'">
+            <div class="message-wrapper" *ngFor="let message of userMessages">
+                <div>
+                    <img class="pro-pic" [src]="message.dpurl">
+                    <span class="notify-badge" *ngIf="message.isonline"></span>
+                </div>
+                <div class="message-content">
+                    <div class="message-header">
+                        <span class="message-name">{{message.name}}</span>
+                        <span class="message-time">{{message.lasttimestamp}}</span>
+                    </div>
+                    <div class="message-body">
+                        <span>{{message.lastmessage}}</span>
+                    </div>
+                </div>
+            </div>
+            <button class="new-messagebtn">New</button>
+        </div>
+    </div>
+</div>

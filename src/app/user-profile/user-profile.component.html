@@ -4,7 +4,10 @@
     </li>
 
     <li class="right icon-container">
-        <a routerLink="/messages"><i class="material-icons">notifications</i></a>
+        <a routerLink="/messages">
+            <span class="notify-badge"></span>
+            <i class="material-icons">notifications_none</i>
+        </a>
     </li>
 </ul>
 <div class="picture-container">
@@ -46,6 +49,6 @@
         <img class="course-image" [src]="course.imageurl">
         <span class="course-title">{{course.title}}</span>
         <span class="course-author">{{course.author}}</span>
-        <app-progressbar></app-progressbar>
+        <app-progressbar [progressLevel]=course.progress></app-progressbar>
     </div>
 </div>

@@ -70,16 +70,13 @@ $bar-bg: rgba(0,0,0,0.075);
 }
 
 .progress {
-  animation: loader 8s ease forwards;
-  // Change the animation fill mode 'infinite' to 'forwards' to stop the animation from repeating.
+  //animation: loader 8s ease forwards;
   background: $blue;
   color: #fff;
   padding: $bar-size;
   width: 0;
 }
 
-// Vertical Centering 
-// You don't need this to make it work on your site.
 .progress-bar {
   max-width: 80%;
 }
