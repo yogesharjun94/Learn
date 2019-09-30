@@ -43,14 +43,14 @@
             <i class="material-icons" *ngIf="courseBody.content">keyboard_arrow_down</i>
         </h2>
         <div class="course-content-wrapper" [ngClass]="courseBody.content ? 'showChildren' : ''">
-            <span *ngFor="let contentItem of courseCurr.content">
+            <span class="course-content-text" *ngFor="let contentItem of courseCurr.content">
                 <i class="material-icons">radio_button_unchecked</i>
-                {{contentItem}}
+                <span>{{contentItem}}</span>
             </span>
         </div>
     </div>
 </div>
-<div id="myModal" class="modal" [style.display]="showModal?'block':'none'" (click)='onExit($event)'>
+<div id="myModal" class="modal" [style.display]="showModal?'block':'none'" [ngClass]="showModal?'':'hide'" (click)='onExit($event)'>
     <div class="modal-content" (click)="onModalClick($event)">
         <div class="list-container">
             <h4>Teachers in the course</h4>

@@ -8,7 +8,8 @@ export class GetCourseService {
 
   allCoursesExpanded: Array<object> = [
     {
-      title: 'Photoshop: effects', imageurl: '../../assets/img/photoshop.jpg', author: 'Tony Hammor', progress: '50%', hours: '18', reviewcount: '47', stars: '4', description: 'Everything about adding effects in photoshop.', content: ['Approaches to designing abstract patterns', 'Using a range of tools to create pattern elements', 'Using stroke settings to customize pattern elements', 'Coloring and recoloring techniques'],
+      title: 'Photoshop: effects', imageurl: '../../assets/img/photoshop.png', author: 'Tony Hammor', progress: '50%', hours: '18', reviewcount: '47', stars: '4', description: 'Everything about adding effects in photoshop.', 
+      content: ['Approaches to designing abstract patterns', 'Using a range of tools to create pattern elements', 'Using stroke to customize pattern elements', 'Coloring and recoloring techniques'],
       teachers: ["Rosalia Mallery",
         'Shona Devenport',
         'Luna Bonnet',
@@ -34,7 +35,7 @@ export class GetCourseService {
     },
     {
       title: 'Intro to Architecture', imageurl: '../../assets/img/architecture.jpg', author: 'Elisa Mittano', progress: '70%', hours: '10', reviewcount: '33', stars: '5', description: 'Everything about adding effects in photoshop.',
-      content: ['qwe', 'qwe', 'qwe', 'qwe'],
+      content: ['Approaches to designing abstract patterns', 'Using a range of tools to create pattern elements', 'Using stroke to customize pattern elements', 'Coloring and recoloring techniques'],
       teachers: ["Rosalia Mallery",
         'Shona Devenport',
         'Luna Bonnet',
@@ -59,8 +60,8 @@ export class GetCourseService {
       ]
     },
     {
-      title: 'Classic Literature', imageurl: '../../assets/img/classicenglish.jpg', author: 'Hemmingway', progress: '10%', hours: '8', reviewcount: '65', stars: '2', description: 'Everything about adding effects in photoshop.',
-      content: ['qwe', 'qwe', 'qwe', 'qwe'],
+      title: 'Classic Literature', imageurl: '../../assets/img/classicenglish.png', author: 'Hemmingway', progress: '10%', hours: '8', reviewcount: '65', stars: '2', description: 'Everything about adding effects in photoshop.',
+      content: ['Approaches to designing abstract patterns', 'Using a range of tools to create pattern elements', 'Using stroke to customize pattern elements', 'Coloring and recoloring techniques'],
       teachers: ["Rosalia Mallery",
         'Shona Devenport',
         'Luna Bonnet',
@@ -86,7 +87,7 @@ export class GetCourseService {
     },
     {
       title: 'Quantum Mechanics', imageurl: '../../assets/img/quantummech.jpg', author: 'Richard Feynman', progress: '40%', hours: '27', reviewcount: '100', stars: '3', description: 'Everything about adding effects in photoshop.',
-      content: ['qwe', 'qwe', 'qwe', 'qwe'],
+      content: ['Approaches to designing abstract patterns', 'Using a range of tools to create pattern elements', 'Using stroke to customize pattern elements', 'Coloring and recoloring techniques'],
       teachers: ["Rosalia Mallery",
         'Shona Devenport',
         'Luna Bonnet',

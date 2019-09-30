@@ -9,6 +9,8 @@
       width: 5rem;
       height: 5rem;
       border-radius: 50%;
+      object-fit: cover;
+      object-position: top;
     }
     .notify-badge{
       position: absolute;
@@ -24,6 +26,7 @@
       flex-direction: column;
       padding: 1rem 1rem;
       border-bottom: 1px solid #eee;
+      width: 100%;
       .message-name{
         font-weight: 600;
       }

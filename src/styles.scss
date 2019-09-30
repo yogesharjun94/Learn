@@ -1,5 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+$fontfamily : "league-gothic","Helvetica Neue",Helvetica,Arial,sans-serif;
 body{
     padding: 0;
     margin: 0;
+}
+html,body,div,span,a {
+    font-family: $fontfamily;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-family: $fontfamily;
 }

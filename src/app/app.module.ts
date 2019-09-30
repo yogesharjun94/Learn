@@ -10,6 +10,8 @@ import { MessagesComponent } from './messages/messages.component';
 import { ProgressbarComponent } from './progressbar/progressbar.component';
 import { CoursegridComponent } from './coursegrid/coursegrid.component';
 import { MessageitemComponent } from './messageitem/messageitem.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { MessageitemComponent } from './messageitem/messageitem.component';
     ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]
