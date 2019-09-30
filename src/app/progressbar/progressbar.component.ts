@@ -7,8 +7,8 @@ import { Component, OnInit , Input  } from '@angular/core';
     <span class="bar">
       <span class="progress" [style.width]=progressLevel></span>
     </span>
-    <span>{{progressLevel}}</span>
   </div>
+  <span class="progress-percent">{{progressLevel}}</span>
   `,
   styleUrls: ['./progressbar.component.scss']
 })
