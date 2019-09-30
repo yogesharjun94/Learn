@@ -25,4 +25,107 @@ ul {
   }
 
 }
-  
+
+.course-thumb-container{
+  .course-thumb{
+    width: 100%;
+    height: 15rem;
+  }
+}
+
+.course-header{
+  padding: 0.5rem 2rem;
+  .course-title{
+    
+  }
+  .course-author{
+    color:$secondary;
+  }
+  .course-hours{
+    color: #bcc;
+  }
+  .course-btn-container{
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    padding-top: 1rem;
+    button{
+      height:3rem;
+      border-radius: 0.3rem;
+      border: none;
+      cursor: pointer;
+      font-size: 1.3rem;
+      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    }
+    .join-btn{
+      width:70%;
+      margin-right: 1rem;
+      background-color: $blue;
+      color:#fff;
+    }
+    .bookmark-btn{
+      background-color: #fff;
+      width:3rem;
+      color: $secondary;
+    }
+  }
+}
+
+.course-body{
+  padding-top:2rem;
+  .course-description {
+    span{
+      display: none;
+      font-size: 1.5rem;
+    }
+    span.showChildren{
+      display: block;
+    }
+    h2{
+      color: $secondary;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #aaa;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      cursor: pointer;
+    }
+    h2.showChildren{
+      color: $primary;
+      padding-bottom:0;
+      border-bottom:none;
+    }
+  }
+  .course-content{
+    h2{
+      color: $secondary;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #aaa;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      cursor: pointer;
+    }
+    h2.showChildren{
+      color: $primary;
+      padding-bottom:0;
+      border-bottom:none;
+    }
+    .course-content-wrapper{
+      display: none;
+      flex-direction: column;
+    }
+    .course-content-wrapper.showChildren{
+      display: flex;
+    }
+    .course-content-wrapper span{
+      font-size: 1.75rem;
+      padding-bottom: 1rem;
+    }
+    .course-content-wrapper span i{
+      padding-right: 1rem;
+    }
+  }
+}

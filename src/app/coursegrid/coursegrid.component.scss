@@ -1,0 +1,34 @@
+@import "../../assets/scss/colors";
+
+.course-container{
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    .course{
+        display: flex;
+        flex-direction: column;
+        padding : 0 1rem;
+        .course-image{
+            width: 8rem;
+            height: 8rem;
+            border-radius: 0.7rem;
+            cursor: pointer;
+        }
+        .course-title{
+            padding-top: 1rem;
+            cursor: pointer;
+        }
+        .course-title:hover{
+            border-bottom:1px solid $primary;
+        }
+        .course-author{
+            padding-top: 1rem;
+            color:$secondary;
+        }
+        app-progressbar{
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+    }
+}

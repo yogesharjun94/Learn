@@ -1,1 +1,46 @@
-<p>course-player works!</p>
+<div class="course-thumb-container">
+    <img class="course-thumb" [src]="courseCurr.imageurl">
+</div>
+<div class="course-header">
+    <h2 class="course-title">
+        {{courseCurr.title}}
+    </h2>
+    <h4 class="course-author">
+        {{courseCurr.author}}
+    </h4>
+    <h5 class="course-hours">
+        {{courseCurr.hours}} hours
+    </h5>
+    <div>
+        <span *ngFor="let number of [0,1,2,3,4]"><i class="material-icons">star</i></span>
+        <span>{{courseCurr.reviewcount}} reviews</span>
+    </div>
+    <div class="course-btn-container">
+        <button class="join-btn">Join Course</button>
+        <button class="bookmark-btn"><i class="material-icons">bookmark</i></button>
+    </div>
+    <div class="course-body">
+        <div class="course-description">
+            <h2 (click)="onCourseBodyClick('description')" [ngClass]="courseBody.description ? 'showChildren' : ''">Description
+                <i class="material-icons" *ngIf="!courseBody.description">keyboard_arrow_right</i>
+                <i class="material-icons" *ngIf="courseBody.description">keyboard_arrow_down</i>
+            </h2>
+            <span [ngClass]="courseBody.description ? 'showChildren' : ''">
+                {{courseCurr.description}}
+            </span>
+        </div>
+        <div class="course-content">
+            <h2 (click)="onCourseBodyClick('content')" [ngClass]="courseBody.content ? 'showChildren' : ''">Content
+                <i class="material-icons" *ngIf="!courseBody.content">keyboard_arrow_right</i>
+                <i class="material-icons" *ngIf="courseBody.content">keyboard_arrow_down</i>
+            </h2>
+            <div class="course-content-wrapper" [ngClass]="courseBody.content ? 'showChildren' : ''">
+                <span *ngFor="let contentItem of courseCurr.content">
+                    <i class="material-icons">radio_button_unchecked</i>
+                    {{contentItem}}
+                </span>
+            </div>
+        </div>
+    </div>
+
+</div>

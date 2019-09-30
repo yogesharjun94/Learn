@@ -8,6 +8,7 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { CoursePlayerComponent } from './course-player/course-player.component';
 import { MessagesComponent } from './messages/messages.component';
 import { ProgressbarComponent } from './progressbar/progressbar.component';
+import { CoursegridComponent } from './coursegrid/coursegrid.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ProgressbarComponent } from './progressbar/progressbar.component';
     UserProfileComponent,
     CoursePlayerComponent,
     MessagesComponent,
-    ProgressbarComponent
+    ProgressbarComponent,
+    CoursegridComponent
     ],
   imports: [
     BrowserModule,
