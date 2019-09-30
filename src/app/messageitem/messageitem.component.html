@@ -1,0 +1,15 @@
+<div class="message-wrapper" *ngFor="let message of messages">
+    <div>
+        <img class="pro-pic" [src]="message.dpurl">
+        <span class="notify-badge" *ngIf="message.isonline"></span>
+    </div>
+    <div class="message-content">
+        <div class="message-header">
+            <span class="message-name">{{message.name}}</span>
+            <span class="message-time">{{message.lasttimestamp}}</span>
+        </div>
+        <div class="message-body">
+            <span>{{message.lastmessage}}</span>
+        </div>
+    </div>
+</div>

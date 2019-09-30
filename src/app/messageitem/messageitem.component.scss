@@ -1,0 +1,49 @@
+@import "../../assets/scss/colors";
+
+.message-wrapper{
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    align-items: center;
+    .pro-pic{
+      width: 5rem;
+      height: 5rem;
+      border-radius: 50%;
+    }
+    .notify-badge{
+      position: absolute;
+      margin-top: 3.5rem;
+      margin-left: -0.8rem;
+      background: #07D822;
+      border-radius: 50%;
+      width: 0.8rem;
+      height: 0.8rem
+    }
+    .message-content{
+      display: flex;
+      flex-direction: column;
+      padding: 1rem 1rem;
+      border-bottom: 1px solid #eee;
+      .message-name{
+        font-weight: 600;
+      }
+      .message-time{
+        color:$secondary;
+        float:right;
+        padding-bottom:1rem;
+      }
+      .message-header{
+  
+      }
+      .message-body span{
+        text-overflow: ellipsis;
+        word-break: break-word;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        line-height: 1;
+        max-height: 2rem;
+      }
+    }
+  }

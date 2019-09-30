@@ -1,5 +1,6 @@
 <div class="course-thumb-container">
     <img class="course-thumb" [src]="courseCurr.imageurl">
+    <a routerLink="/userprofile"><i class="material-icons">keyboard_backspace</i></a>
 </div>
 <div class="course-header">
     <h2 class="course-title">
@@ -11,36 +12,57 @@
     <h5 class="course-hours">
         {{courseCurr.hours}} hours
     </h5>
-    <div>
-        <span *ngFor="let number of [0,1,2,3,4]"><i class="material-icons">star</i></span>
-        <span>{{courseCurr.reviewcount}} reviews</span>
+    <div class="review-container">
+        <span *ngFor="let number of [0,1,2,3,4]" class="rating-star">
+            <i class="material-icons" *ngIf="number < courseCurr.stars">star</i>
+            <i class="material-icons" *ngIf="number >= courseCurr.stars">star_border</i>
+        </span>
+        <span class="review-text">{{courseCurr.reviewcount}} reviews</span>
     </div>
     <div class="course-btn-container">
         <button class="join-btn">Join Course</button>
         <button class="bookmark-btn"><i class="material-icons">bookmark</i></button>
+        <button class="view-btn" (click)="showModal = !showModal"><i
+                class="material-icons">supervised_user_circle</i></button>
     </div>
-    <div class="course-body">
-        <div class="course-description">
-            <h2 (click)="onCourseBodyClick('description')" [ngClass]="courseBody.description ? 'showChildren' : ''">Description
-                <i class="material-icons" *ngIf="!courseBody.description">keyboard_arrow_right</i>
-                <i class="material-icons" *ngIf="courseBody.description">keyboard_arrow_down</i>
-            </h2>
-            <span [ngClass]="courseBody.description ? 'showChildren' : ''">
-                {{courseCurr.description}}
+</div>
+<div class="course-body">
+    <div class="course-description">
+        <h2 (click)="onCourseBodyClick('description')" [ngClass]="courseBody.description ? 'showChildren' : ''">
+            Description
+            <i class="material-icons" *ngIf="!courseBody.description">keyboard_arrow_right</i>
+            <i class="material-icons" *ngIf="courseBody.description">keyboard_arrow_down</i>
+        </h2>
+        <span [ngClass]="courseBody.description ? 'showChildren' : ''">
+            {{courseCurr.description}}
+        </span>
+    </div>
+    <div class="course-content">
+        <h2 (click)="onCourseBodyClick('content')" [ngClass]="courseBody.content ? 'showChildren' : ''">Content
+            <i class="material-icons" *ngIf="!courseBody.content">keyboard_arrow_right</i>
+            <i class="material-icons" *ngIf="courseBody.content">keyboard_arrow_down</i>
+        </h2>
+        <div class="course-content-wrapper" [ngClass]="courseBody.content ? 'showChildren' : ''">
+            <span *ngFor="let contentItem of courseCurr.content">
+                <i class="material-icons">radio_button_unchecked</i>
+                {{contentItem}}
             </span>
         </div>
-        <div class="course-content">
-            <h2 (click)="onCourseBodyClick('content')" [ngClass]="courseBody.content ? 'showChildren' : ''">Content
-                <i class="material-icons" *ngIf="!courseBody.content">keyboard_arrow_right</i>
-                <i class="material-icons" *ngIf="courseBody.content">keyboard_arrow_down</i>
-            </h2>
-            <div class="course-content-wrapper" [ngClass]="courseBody.content ? 'showChildren' : ''">
-                <span *ngFor="let contentItem of courseCurr.content">
-                    <i class="material-icons">radio_button_unchecked</i>
-                    {{contentItem}}
-                </span>
+    </div>
+</div>
+<div id="myModal" class="modal" [style.display]="showModal?'block':'none'" (click)='onExit($event)'>
+    <div class="modal-content" (click)="onModalClick($event)">
+        <div class="list-container">
+            <h4>Teachers in the course</h4>
+            <div class="list-body">
+                <span *ngFor="let teacher of courseCurr.teachers">{{teacher}}</span>
+            </div>
+        </div>
+        <div class="list-container">
+            <h4>Users in the course</h4>
+            <div class="list-body">
+                <span *ngFor="let user of courseCurr.users">{{user}}</span>
             </div>
         </div>
     </div>
-
 </div>

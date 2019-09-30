@@ -9,6 +9,7 @@ import { CoursePlayerComponent } from './course-player/course-player.component';
 import { MessagesComponent } from './messages/messages.component';
 import { ProgressbarComponent } from './progressbar/progressbar.component';
 import { CoursegridComponent } from './coursegrid/coursegrid.component';
+import { MessageitemComponent } from './messageitem/messageitem.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { CoursegridComponent } from './coursegrid/coursegrid.component';
     CoursePlayerComponent,
     MessagesComponent,
     ProgressbarComponent,
-    CoursegridComponent
+    CoursegridComponent,
+    MessageitemComponent
     ],
   imports: [
     BrowserModule,

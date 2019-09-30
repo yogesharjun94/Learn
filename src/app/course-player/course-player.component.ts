@@ -13,12 +13,13 @@ export class CoursePlayerComponent implements OnInit {
   courseReq : any;
   courseCurr : any;
   public courseBody ;
+  showModal = false;
   constructor(private router: Router,private courseSelected : GetCourseDetailService,private courseExpanded : GetCourseService) {}
 
   ngOnInit() {
     this.courseBody = {
       description : false,
-      content : false
+      content : true
     } ;
     this.courseSelected.currentCourse.subscribe(course => this.courseReq = course);
     this.courseExpanded.get().subscribe(res => {
@@ -28,9 +29,7 @@ export class CoursePlayerComponent implements OnInit {
     });
     if(!this.courseCurr || Object.keys(this.courseCurr).length == 0){
       this.router.navigate(['userprofile']);
-    }
-    console.log(this.courseCurr);
-    
+    }    
   }
 
   onCourseBodyClick(type){
@@ -56,6 +55,14 @@ export class CoursePlayerComponent implements OnInit {
         this.courseBody.description = false;
       }
     }
+  }
+
+  onExit(event){
+    this.showModal = false;
+  }
+
+  onModalClick(event){
+    event.stopPropagation();
   }
 
 }

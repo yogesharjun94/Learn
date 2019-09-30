@@ -16,7 +16,6 @@ export class CoursegridComponent implements OnInit {
   }
 
   courseRedirect(course){
-    console.log(course);
     this.courseSelected.changeCourse(course);
     this.router.navigate(['courseplayer']);
   }
